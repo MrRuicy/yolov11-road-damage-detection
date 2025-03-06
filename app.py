@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from ultralytics import YOLO
+
 from PIL import Image
 import os
 import subprocess
@@ -11,6 +11,11 @@ try:
 except ImportError:
     subprocess.run(["pip", "install", "opencv-python-headless"])
     import cv2
+try:
+    from ultralytics import YOLO
+except ImportError:
+    subprocess.run(["pip", "install", "ultralytics"])
+    from ultralytics import YOLO
 # 加载 YOLOv11 模型
 model = YOLO("./yolov11.pt")
 
