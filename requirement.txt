@@ -1,7 +1,7 @@
+opencv-python-headless>=4.6.0
 streamlit
 numpy>=1.23.0,<=2.1.1
 matplotlib>=3.3.0
-opencv-python-headless>=4.1.2
 pillow>=7.1.2
 pyyaml>=5.3.1
 requests>=2.23.0
