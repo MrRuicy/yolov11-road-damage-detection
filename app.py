@@ -1,5 +1,3 @@
-import sys
-sys.path.append("/home/appuser/.local/lib/python3.9/site-packages")
 import streamlit as st
 import cv2
 import numpy as np
