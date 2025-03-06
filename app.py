@@ -4,9 +4,16 @@ import numpy as np
 from ultralytics import YOLO
 from PIL import Image
 import os
+import subprocess
 
+# 手动安装 OpenCV
+try:
+    import cv2
+except ImportError:
+    subprocess.run(["pip", "install", "opencv-python-headless"])
+    import cv2
 # 加载 YOLOv11 模型
-model = YOLO("./runs/detect/DySample/weights/best.pt")
+model = YOLO("./yolov11.pt")
 
 # 设置页面标题
 st.title("YOLOv11 道路病害检测")
